@@ -1,11 +1,26 @@
 
+import { Link, Outlet } from 'react-router-dom'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-5xl text-red-600 font-["Poppins"] font-bold text-center p-20'>hellow</h1>
+      <nav>
+        <ul className='flex space-x-8 mb-8'>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+      </nav>
+      <Outlet/>
+      <footer>Footer</footer>
     </>
   )
 }
