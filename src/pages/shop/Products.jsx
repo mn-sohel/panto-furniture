@@ -1,5 +1,6 @@
 import React from 'react'
 import { products } from '../../utils/products'
+import ProductCard from './ProductCard'
 
 const Products = ({headLine}) => {
     const categories = ["Chair", "Beds", "Sofa", "Lamp"]
@@ -17,13 +18,12 @@ const Products = ({headLine}) => {
                         ))
                     }
                 </div>
-
             </div>
             {/* product grid */}
-            <div>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6'>
                 {
                     products.map((product, index) => (
-                        <div>{product.name}</div>
+                        <ProductCard key={index} product={product}/>
                     ))
                 }
             </div>
